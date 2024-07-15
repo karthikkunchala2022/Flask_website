@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Liquidmind.AI Invoice Automation - Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: #c9d6ff;
+            background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            background-color: #512da8;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .navbar a {
+            color: #fff;
+            text-decoration: none; 
+            margin: 0 15px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar a:hover {
+            text-decoration: underline; 
+        }
+        
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .navbar a {
+                margin: 10px 0;
+            }
+            
+            .content {
+                padding: 20px 10px;
+            }
+            
+            .content h1 {
+                font-size: 28px;
+            }
+            
+            .content p {
+                font-size: 16px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .navbar {
+                padding: 10px;
+            }
+            
+            .navbar a {
+                margin: 5px 0;
+                font-size: 14px;
+            }
+            
+            .content {
+                padding: 10px;
+            }
+            
+            .content h1 {
+                font-size: 24px;
+            }
+            
+            .content p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1 style="margin: 0; font-size: 24px;">Liquidmind.AI Invoice Automation</h1>
+        <div>
+            <a href="{{ url_for('dashboard') }}">Home</a>
+            <a href="{{ url_for('vendor_register') }}">Vendor</a>
+            <a href="{{ url_for('calendar') }}">Calendar</a>
+            <a href="{{ url_for('get_dashboard') }}">Dashboard</a>
+            <a href="{{ url_for('user_installments') }}">Installments</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to your Dashboard</h1>
+        <p>Here you can manage your tasks, appointments, and more.</p>
+    </div>
+
+</body>
+
+</html>
